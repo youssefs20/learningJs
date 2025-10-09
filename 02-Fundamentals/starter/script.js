@@ -104,14 +104,131 @@ friends.shift();
 console.log(friends);
 */
 
-/*****************06.Intro to Objects***********************/
+/*****************06.Objects***********************/
 
+/*
 const joeObj = {
     fName: "joe",
     lName: "sameh",
-    age: 2037 - 2002,
-    job: "teacher"
+    birthYeah: 2002,
+    job: "teacher",
+    hadDriver: true,
+
+
+    calcAge: function () {
+        return 2025 - this.birthYeah;
+    },
+
+    lol: function () {
+        console.log(joeObj.fName, "is a ", joeObj.job, " and he is ", this.calcAge(), " years old");
+    }
 }
-console.log(joeObj);
+//console.log(joeObj);
 console.log(joeObj.fName);
 console.log(joeObj["lName"]);
+
+console.log(joeObj.calcAge());
+console.log(joeObj.lol());
+
+//////////////Challenge////////////////////////////
+const markObj = {
+    fName: "mark miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+const johnObj = {
+    fName: "john smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+console.log(markObj.calcBMI());
+console.log(johnObj.calcBMI());
+
+if (markObj.calcBMI() > johnObj.calcBMI()) {
+    console.log(`${markObj.fName}'s BMI (${markObj.calcBMI()}) is higher than ${johnObj.fName}'s BMI (${johnObj.calcBMI()})!`);
+}
+else if (johnObj.calcBMI() > markObj.calcBMI()) {
+    console.log(`${johnObj.fName}'s BMI (${johnObj.calcBMI()}) is higher than ${markObj.fName}'s BMI (${markObj.calcBMI()})!`);
+}
+*/
+
+/**************07.Loops***********************/
+
+/*  
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`lifting weights repetition ${rep}`);
+}
+
+const joeArr = [
+    "joe",
+    "sameh",
+    2037 - 2002,
+    19343,
+    14134,
+    "teacher",
+    ["seif", "yahia", "hafez"],
+
+]
+// continue statement
+console.log("-----CONTINUE STATEMENT-----");
+for (let i = 0; i < joeArr.length; i++) {
+    if (typeof joeArr[i] !== "string") continue;
+    console.log(joeArr[i]);
+}
+
+// break statement
+console.log("-----BREAK STATEMENT-----");
+for (let i = 0; i < joeArr[i].length; i++) {
+    if (typeof joeArr[i] === "number")
+        break;
+
+    console.log(joeArr[i]);
+}
+
+const years = [2002, 2003, 2004, 2005];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+*/
+
+/**************08.Loops Backwards and Loops in Loops***********************/
+
+/*  
+
+const joeArr = [
+    "joe",
+    "sameh",
+    2037 - 2002,
+    19343,
+    14134,
+    "teacher",
+    ["seif", "yahia", "hafez"],
+
+]
+
+for (let i = joeArr.length - 1; i >= 0; i--) {
+    console.log(i, "\n", joeArr[i]);
+}
+*/
+
+/**************09.The while Loop***********************/
+
+/* */
+let rep = 1;
+while (rep <= 5) {
+    console.log(`hello from the gym ${rep}`);
+    rep++;
+}
+
