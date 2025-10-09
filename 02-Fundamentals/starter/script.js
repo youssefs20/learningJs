@@ -37,8 +37,6 @@ const age2 = calcAge2(1990);
 console.log(age1, age2);
 */
 
-
-
 /***********03.Arrow Functions**************************/
 
 /*
@@ -56,7 +54,6 @@ console.log(yearsUntil(2002, "youssef"));
 */
 
 /***********04.Functions Calling Other Functions**************************/
-
 
 /*
 function cutFruit(loot) {
@@ -223,12 +220,63 @@ for (let i = joeArr.length - 1; i >= 0; i--) {
 }
 */
 
-/**************09.The while Loop***********************/
+/**************09.The while Loop and challenges***********************/
 
-/* */
+/* 
 let rep = 1;
 while (rep <= 5) {
     console.log(`hello from the gym ${rep}`);
     rep++;
 }
+    
 
+const myCountry = {
+    country: "Egypt",
+    capital: "cairo",
+    language: "aracbic",
+    population: "100 million",
+    neighbours: ["sudan", "libya", "palestine"],
+
+
+    describe: function () {
+        console.log(`${this.country} has ${this.population} people, has ${this.neighbours.length}`)
+    },
+
+    checkIsIsland: function () {
+        this.isIsalnd = this.neighbours.length === 0 ? true : false;
+    },
+}
+//console.log(myCountry);
+console.log(myCountry.describe())
+myCountry.checkIsIsland();
+console.log(myCountry.isIsalnd);
+
+//////////calc//////////////////
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+}
+console.log(bills, tips, totals);
+
+function calcAvg(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAvg(totals));
+console.log(calcAvg(tips));
+
+*/
+
+/************************************/
