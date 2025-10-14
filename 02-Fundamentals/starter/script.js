@@ -280,3 +280,19 @@ console.log(calcAvg(tips));
 */
 
 /************************************/
+
+// ! this alert
+// * this highlighted
+// ? this is question
+// TODO this is a to do
+//FIXME 
+/* 
+    ! this alert
+    * this highlighted
+    ? this is question
+    TODO this is a to do
+    FIXME
+ */
+//#region 
+
+//#endregion
