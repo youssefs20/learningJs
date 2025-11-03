@@ -1,6 +1,6 @@
 'use strict';
 
-// Data needed for a later exercise
+/* // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
@@ -48,7 +48,7 @@ const restaurant = {
       close: 24,
     },
   },
-};
+}; */
 
 /******33.Destructing arrays**************/
 
@@ -96,9 +96,79 @@ console.log(open); */
 
 /*********35.spread operator*************/
 
-const arr = [7, 8, 9];
+/* const arr = [7, 8, 9];
 const newarr = [2, 3, arr];
 console.log(newarr); //[2,3,[7,8,9]]
 
 const str = 'youssef';
-console.log(...str);
+console.log(...str); */
+
+/******35.coding challenge*****************/
+
+/* const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+//1.
+const [players1, players2] = game.players;
+//2.
+const [gk, ...fieldPlayers] = players1;
+//3.
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+//4.
+const player1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+//5.
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+//6.
+function printGoals(...players) {
+  console.log(`${players.length} goals were scored`);
+}
+
+printfGoals(...game.scored);
+
+//7.
+team1 < team2 && console.log('Team 1 is more likely to win');
+team1 > team2 && console.log('Team 2 is more likely to win'); */
+
+/*  */
